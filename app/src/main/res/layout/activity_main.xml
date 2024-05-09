@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+
+        android:elevation="3dp"
+        android:background="@drawable/redondo"
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/red"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeColor="@color/Verde"
+            app:hintTextColor="@color/cinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editCEP"
+                android:hint="@string/cep"
+                android:background="@drawable/edit_text_rounded"
+                android:inputType="number"
+                android:textColorHint="@color/cinza"
+                android:textCursorDrawable="@drawable/cursor"
+                android:maxLength="8"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btBuscarCEP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/Verde"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:elevation="5dp"
+            android:text="@string/buscar_cep"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeColor="@color/Verde"
+            android:textColorHint="@color/cinza"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editLogradouro"
+            android:hint="@string/logradouro"
+            android:inputType="none"
+            android:textColorHint="@color/cinza"
+            android:background="@drawable/edit"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:focusable="false"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:boxStrokeColor="@color/Verde"
+        android:inputType="none"
+        android:textColorHint="@color/cinza"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editBairro"
+            android:hint="@string/bairro"
+            android:inputType="none"
+            android:background="@drawable/edit"
+            android:maxLines="1"
+            android:focusable="false"
+            android:textColorHint="@color/cinza"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:boxStrokeColor="@color/Verde"
+        android:textColorHint="@color/cinza"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCidade"
+            android:hint="@string/cidade"
+            android:inputType="none"
+            android:maxLines="1"
+            android:textColorHint="@color/cinza"
+            android:background="@drawable/edit"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textColor="@color/black"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEstado"
+                android:layout_width="233dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/edit"
+                android:focusable="false"
+                android:hint="@string/estado"
+                android:inputType="none"
+                android:maxLength="2"
+                android:padding="17dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinza"
+                android:textCursorDrawable="@drawable/cursor" />
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                app:srcCompat="@drawable/baseline_360_24" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/retro" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
